@@ -1,0 +1,1 @@
+const openAIAPIKey = 'sk-nada-VD9oRKhLKveshT4KpS80T3BlbkFJ15VLwrKYWrBzFbXcVjhp';
