@@ -12,6 +12,7 @@ import 'package:task/data/openai_service.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 
 class HomePage extends StatefulWidget {
+  static const String routeName = 'home';
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -93,7 +94,7 @@ class _HomePageState extends State<HomePage> {
           centerTitle: true,
           backgroundColor: MyTheme.bgAppBar,
           title: BounceInDown(
-            child: Text(
+            child: const Text(
               'IntelliChat',
               style: TextStyle(
                 fontSize: 25,
@@ -104,7 +105,7 @@ class _HomePageState extends State<HomePage> {
           ),
           leading: IconButton(
             onPressed: advancedDrawerController.showDrawer,
-            icon: Icon(
+            icon: const Icon(
               Icons.menu,
               color: MyTheme.menuColor,
               size: 42,
@@ -121,14 +122,14 @@ class _HomePageState extends State<HomePage> {
                       child: Container(
                         height: 140,
                         width: 140,
-                        margin: EdgeInsets.only(top: 15),
+                        margin: const EdgeInsets.only(top: 15),
                         decoration: BoxDecoration(
                           color: MyTheme.lightCircle.withOpacity(0.3),
                           shape: BoxShape.circle,
                         ),
                       ),
                     ),
-                    Center(
+                    const Center(
                       child: Image(
                         image: AssetImage('assets/images/logo.png'),
                         height: 190,
@@ -142,8 +143,8 @@ class _HomePageState extends State<HomePage> {
                 child: Visibility(
                   visible: generatedImageUrl == null,
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                    margin: EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    margin: const EdgeInsets.symmetric(horizontal: 20),
                     decoration: BoxDecoration(
                       border: Border.all(color: MyTheme.border),
                       borderRadius: BorderRadius.circular(20).copyWith(topLeft: Radius.zero),
@@ -192,21 +193,21 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: [
                     SlideInLeft(
-                      child: FeaturesBox(
+                      child: const FeaturesBox(
                         color: MyTheme.firstBox,
                         title: 'ChatGPT',
                         text: 'A smarter way to stay organized and informed with ChatGPT.',
                       ),
                     ),
                     SlideInRight(
-                      child: FeaturesBox(
+                      child: const FeaturesBox(
                         color: MyTheme.secondBox,
                         title: 'Dall-E',
                         text: 'Get inspired and stay creative with your personal assistant powered by Dall-E.',
                       ),
                     ),
                     SlideInLeft(
-                      child: FeaturesBox(
+                      child: const FeaturesBox(
                         color: MyTheme.thirdBox,
                         title: 'Smart Voice Assistant',
                         text: 'Get the best of both worlds with a voice assistant powered by Dall-E and ChatGPT.',
